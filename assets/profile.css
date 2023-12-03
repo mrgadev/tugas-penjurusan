@@ -1,0 +1,299 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:'League Spartan', sans-serif;
+}
+
+:root {
+	--primary-100: #622200;
+	--primary-50: #AA7753;
+	--primary-25: #D5BBA9;
+	
+	--secondary-100: #4E4A24;
+	--secondary-50: #95927C;
+	--secondary-25: #DCDBD3;
+	
+	--neutral-100: #222;
+	--neutral-50: #444;
+	--neutral-25: #F5F5F5;
+	
+	--huge-title: 96px;
+	--title: 48px;
+	--subtitle: 32px;
+	--content: 24px;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Navbar Section */
+nav.topnav {
+	padding: 2rem 10rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav.topnav .menu-item {
+	display: flex;
+	
+	gap: 2rem;
+}
+
+nav.topnav .menu-item a{
+	font-size: var(--content);
+	font-weight: 500;
+	color: var(--primary-100);
+}
+
+/* Jumbotron Section */
+main.jumbotron {
+	
+	padding: 2rem 10rem;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	max-height: 100vh;
+}
+
+
+
+main.jumbotron .left-jumbotron {
+	width: 40%;
+}
+
+main.jumbotron .left-jumbotron img {
+	width: 500px;
+	justify-self: end;
+	border-radius: 300px 300px 0 0;
+}
+main.jumbotron .right-jumbotron {
+	width: 60%;
+}
+
+main.jumbotron .right-jumbotron .ceo-speech{
+	font-size: var(--huge-title);
+	font-weight: 600;
+	margin-bottom: 2rem;
+	color: var(--primary-100);
+}
+
+main.jumbotron .right-jumbotron .role {
+	font-size: var(--subtitle);
+	color: var(--secondary-100);
+	font-weight: 500;
+	line-height: 3rem;
+}
+
+/* Our History Section */
+.company-history {
+	margin-top: 200px;
+	padding: 2rem 10rem;
+}
+
+.company-history h1 {
+	font-size: var(--title);
+	color: var(--primary-100);
+	margin-bottom: 85px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.company-history .content {
+	display: flex;
+	gap: 75px;
+}
+
+.company-history .content p {
+	align-self: center;
+	font-size: var(--subtitle);
+	line-height: 3rem;
+	color: var(--neutral-100);
+}
+
+/* Our Great team Section */
+.our-great-team {
+	margin-top: 200px;
+	padding: 2rem 10rem;
+}
+
+.our-great-team h1 {
+	margin-bottom: 85px;
+	font-size: var(--title);
+	color: var(--primary-100);
+	font-weight: 600;
+	text-align: center;
+}
+
+.our-great-team .content-grid {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	justify-content: center;
+	gap: 2rem; 	
+}
+
+.our-great-team .content-grid .card {
+	position: relative;	
+	cursor: pointer;
+}
+
+.our-great-team .content-grid .card .overlay {
+	position: absolute;
+	z-index: -1;
+	bottom: -1rem;
+	left: 0;
+	width: 100%;
+	height: 35%;
+	background-color: var(--primary-25);
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	opacity: 0%;
+	transition: all .5s ease;
+}
+
+.our-great-team .content-grid .card:hover .overlay {
+	bottom: 0;
+	left: 0;
+	opacity: 100%;
+	z-index: 1;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+
+.our-great-team .content-grid .card .overlay .name {
+		font-size: var(--subtitle);
+		color: var(--primary-100);
+		font-weight: 600;
+		margin: 1rem 0 .5rem 0;
+}
+
+.our-great-team .content-grid .card .overlay .details p {
+	font-size: var(--content);
+	color: var(--primary-100);
+	margin-bottom: 1rem;
+}
+
+.our-great-team .content-grid .card .overlay .details .socmed-icons {
+	display: flex;
+	margin: 1rem 0;
+	gap:1rem;
+	font-size: var(--content);
+}
+
+.our-great-team .content-grid .card .overlay .details .socmed-icons i {
+	color: var(--primary-100);
+}
+/* Company Values Section */
+.our-values {
+	margin: 200px 0;
+	padding: 2rem 10rem;
+}
+
+.our-values h1 {
+	font-size: var(--title);
+	color: var(--primary-100);
+	text-align: center;
+	margin-bottom: 85px;
+}
+
+.our-values .content-grid {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-evenly;
+	gap: 100px;
+}
+
+.our-values .content-grid .content-item {
+	display: flex;
+	gap: 2rem;
+}
+
+.our-values .content-grid .content-item i {
+	font-size: 75px;	
+	color: var(--secondary-100);
+	background: var(--secondary-25);
+	padding: 2rem;
+	border-radius: 5px;
+}
+
+.our-values .content-grid .content-item p {
+	font-size: var(--subtitle);
+	align-self: center;
+	color: var(--secondary-100);
+	font-weight: 600;
+}
+
+/*Footer Section*/
+footer {
+	padding: 2rem 10rem;
+	background: var(--primary-25);
+	display: flex;
+	gap: 70px;
+}
+
+footer .columns {
+	margin: 85px 0;
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+}
+
+footer .columns p {
+	margin: 2rem 0;
+	font-size: var(--content);
+	line-height: 2rem;
+	color: var(--neutral-100);
+}
+
+footer .columns h2 {
+	font-size: var(--title);
+	color: var(--primary-100);
+	margin-bottom: 50px;
+}
+
+footer .columns a {
+	margin: 1rem 0;
+	color: var(--neutral-100);
+	font-size: var(--subtitle);
+	font-weight: 500;
+}
+
+footer .columns .socmed-icons {
+	display: flex;
+	gap: 30px;
+	margin-bottom: 60px;
+}
+
+footer .columns .socmed-icons i {
+	font-size: 35px;
+	color: var(--neutral-25);
+	background: var(--primary-100);
+	padding: 20px 22px;
+	border-radius: 50px;
+}
+
+footer .columns .payment-methods {
+	display: flex;
+	gap: 2rem;
+}
+
+footer .columns .payment-methods .merchant {
+	width: 30%;
+	border-radius: 5px;
+	align-self: center;
+}
+
+footer .columns .payment-methods .merchant img{
+	width: 100%;
+}
+
+.copyright {
+	padding: 2rem 10rem; 
+	background: var(--secondary-25);
+	font-size: var(--content);
+	color: var(--secondary-100);
+}
