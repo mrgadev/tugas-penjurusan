@@ -1,0 +1,385 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:'League Spartan', sans-serif;
+}
+
+:root {
+	--primary-100: #622200;
+	--primary-50: #AA7753;
+	--primary-25: #D5BBA9;
+	
+	--secondary-100: #4E4A24;
+	--secondary-50: #95927C;
+	--secondary-25: #DCDBD3;
+	
+	--neutral-100: #222;
+	--neutral-50: #444;
+	--neutral-25: #F5F5F5;
+	
+	--huge-title: 96px;
+	--title: 48px;
+	--subtitle: 32px;
+	--content: 24px;
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary-100);
+}
+
+/* Navbar Section */
+nav.topnav {
+	padding: 2rem 10rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav.topnav .menu-item {
+	display: flex;
+	
+	gap: 2rem;
+}
+
+nav.topnav .menu-item a{
+	font-size: var(--content);
+	font-weight: 500;
+	color: var(--primary-100);
+}
+
+.jumbotron {
+	padding: 2rem 10rem;
+	display: flex;
+	align-items: center;
+	background: url('https://i.imgur.com/8k7LZhT.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 85vh;
+}
+
+.jumbotron h1 {
+	width: 85%;
+	font-size: var(--huge-title);
+	font-weight: 500;
+	color: var(--primary-100);
+	line-height: 7rem;
+}
+
+.featured-posts {
+	margin-top: 100px;
+	padding: 2rem 10rem;
+	height: 835px;
+}
+
+.featured-posts > h1 {
+	text-align: center;
+	font-size: var(--title);
+	color: var(--primary-100);
+	font-weight: 600;
+	margin-bottom: 90px;
+}
+
+.featured-posts .container-flex {
+	display: flex;
+	gap: 50px;
+	height: 100%;
+}
+
+.featured-posts .container-flex .left {
+	position: relative;
+	height: 100%;
+	width: 50%;
+	width: 50%;
+	background: url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+	background-size: cover;
+	
+}
+
+.featured-posts .container-flex .left .overlay {
+	position: relative;
+	height: 100%;
+	padding: 3rem;
+	background: rgba(0,0,0,0.5);
+	color: var(--neutral-25);
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	opacity: 0%;
+	transition: all 0.5s ease;
+}
+
+.featured-posts .container-flex .left:hover .overlay {
+	opacity: 100%;
+	transition: all 0.5s ease;
+	cursor: pointer;
+}
+
+.featured-posts .container-flex .left .overlay .category {
+	text-transform: uppercase;
+	font-size: calc(var(--content)/1.5);
+	width: fit-content;
+	padding: 1rem;
+	letter-spacing: 5px;
+	background: var(--secondary-25);
+	color: var(--secondary-100);
+	border-radius: 5px;
+}
+
+.featured-posts .container-flex .left .overlay h1 {
+	margin: 2rem 0;
+	font-size: var(--title);
+	font-weight: 600;
+}
+
+.featured-posts .container-flex .left .overlay .author {
+	display: flex;
+	gap: 2rem;
+}
+
+.featured-posts .container-flex .left .overlay .author img {
+	width: 75px;
+	border-radius: 75px;
+}
+
+.featured-posts .container-flex .left .overlay .author p {
+	align-self: center;
+	font-size: calc(var(--subtitle)*0.85);
+}
+
+.featured-posts .container-flex .right {
+	height: 100%;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.featured-posts .container-flex .right .top {
+	width: 100%;
+	height: 50%;
+	background: url('https://images.pexels.com/photos/298842/pexels-photo-298842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+	background-size: cover;
+}
+
+.featured-posts .container-flex .right .bottom {
+	width: 100%;
+	height: 50%;
+	background: url('https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,w_730/at%2Fhouse%20tours%2F2020-01%2FLula%20Poggi%2FPHOTO_12');
+	background-size: cover;
+}
+
+.featured-posts .container-flex .right .top .overlay, 
+.featured-posts .container-flex .right .bottom .overlay {
+	position: relative;
+	height: 100%;
+	padding: 3rem;
+	background: rgba(0,0,0,0.5);
+	color: var(--neutral-25);
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	opacity: 0%;
+	transition: all 0.5s ease;
+}
+
+.featured-posts .container-flex .right .top:hover .overlay,
+.featured-posts .container-flex .right .bottom:hover .overlay {
+	opacity: 100%;
+	transition: all 0.5s ease;
+	cursor: pointer;
+}
+
+.featured-posts .container-flex .right .top .overlay .category,
+.featured-posts .container-flex .right .bottom .overlay .category {
+	text-transform: uppercase;
+	font-size: calc(var(--content)/1.5);
+	width: max-content;
+	padding: 1rem;
+	letter-spacing: 5px;
+	background: var(--secondary-25);
+	color: var(--secondary-100);
+	border-radius: 5px;
+}
+
+.featured-posts .container-flex .right .top .overlay h1,
+.featured-posts .container-flex .right .bottom .overlay h1 {
+	margin: 2rem 0;
+	font-size: var(--title);
+	font-weight: 600;
+}
+
+.featured-posts .container-flex .right .top .overlay .author,
+.featured-posts .container-flex .right .bottom .overlay .author {
+	display: flex;
+	gap: 2rem;
+}
+
+.featured-posts .container-flex .right .top .overlay .author img,
+.featured-posts .container-flex .right .bottom .overlay .author img {
+	width: 75px;
+	border-radius: 75px;
+}
+
+.featured-posts .container-flex .right .top .overlay .author p,
+.featured-posts .container-flex .right .bottom .overlay .author p  {
+	align-self: center;
+	font-size: calc(var(--subtitle)*0.85);
+}
+
+
+/* Categories Section*/
+.categories-container {
+	margin-top: 200px;
+	padding: 2rem 10rem;
+}
+
+.categories-container h1 {
+	margin-bottom: 90px;
+	font-size: var(--title);
+	font-weight: 600;
+	color: var(--primary-100);
+	text-align: center;	
+}
+
+.categories {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 2rem;
+}
+
+.categories .card {
+	position: relative;
+	padding: 7rem 2rem;
+	border-radius: 5px;
+}
+
+.categories .card .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	padding-left: 2rem;
+	opacity: 0%;
+	transition: all 0.5s ease;
+}
+
+.categories .card .overlay p {
+	font-size: var(--subtitle);
+	font-weight: 500;
+	color: var(--neutral-25);
+}
+
+.categories .card:hover .overlay {
+	opacity: 100%;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.categories .bg-1 {
+	background: url('https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=1600');
+	background-size: cover;
+}
+
+.categories .bg-2 {
+	background: url('https://images.pexels.com/photos/1080719/pexels-photo-1080719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+	background-size: cover;
+}
+
+.categories .bg-3 {
+	background: url('https://images.pexels.com/photos/534174/pexels-photo-534174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+	background-size: cover;
+}
+
+.categories .bg-4 {
+	background: url('https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+	background-size: cover;
+}
+
+.categories .bg-5 {
+	background: url('https://images.pexels.com/photos/759960/pexels-photo-759960.jpeg?auto=compress&cs=tinysrgb&w=1600');
+	background-size: cover;
+}
+
+.categories .bg-6 {
+	background: url('https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+	background-size: cover;
+}
+
+.latest-articles {
+	margin-top: 200px;
+	padding: 2rem 10rem;
+	position: relative;
+	display: flex;
+}
+
+.latest-articles .left-container {
+	position: absolute;
+	top: 50%;
+	left: -13%;
+	padding: 3rem;
+	width: 750px;
+	font-size: var(--title);
+	color: var(--primary-100);
+	background: var(--primary-25);
+	text-align: center;
+	transform: rotate(-90deg);
+	align-self: center;
+}
+
+.latest-articles .right-container {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.latest-articles .right-container .article-container {
+	display: flex;
+	flex-direction: row;
+	gap: 50px;
+}
+
+.latest-articles .right-container .article-container .article-image {
+	width: 800px;
+	height: 500px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.latest-articles .right-container .article-container .metadata {
+	justify-self: center;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.latest-articles .right-container .article-container .metadata .category {
+	text-transform: uppercase;
+	font-size: calc(var(--content)/1.5);
+	width: max-content;
+	padding: 1rem;
+	letter-spacing: 5px;
+	background: var(--secondary-25);
+	color: var(--secondary-100);
+	border-radius: 5px;
+}
+
+.latest-articles .right-container .article-container .metadata .title {
+	font-size: var(--title);
+	font-weight: 600;
+}
+
+.latest-articles .right-container .article-container .metadata .date {
+	font-size: var(--content);
+}
+
+.latest-articles .right-container .article-container .metadata .author {
+
+}
